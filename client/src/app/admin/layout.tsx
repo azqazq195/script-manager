@@ -5,30 +5,18 @@ import {ScrollArea} from "@/components/ui/scroll-area";
 
 
 export const metadata: Metadata = {
-  title: "설정",
+  title: "Settings",
   description: "Advanced form example using react-hook-form and Zod.",
 }
 
 const sidebarNavItems = [
   {
-    title: "계정",
-    href: "/settings/account",
+    title: "사용자",
+    href: "/admin/users",
   },
   {
-    title: "Profile",
-    href: "/settings/profile",
-  },
-  {
-    title: "Appearance",
-    href: "/settings/appearance",
-  },
-  {
-    title: "Notifications",
-    href: "/settings/notifications",
-  },
-  {
-    title: "Display",
-    href: "/settings/display",
+    title: "그룹",
+    href: "/admin/groups",
   },
 ]
 
@@ -42,9 +30,9 @@ export default function SettingsLayout({children}: SettingsLayoutProps) {
       <div className="overflow-hidden rounded-[0.5rem] border bg-background shadow-md md:shadow-xl">
         <div className="hidden space-y-6 p-10 pb-16 md:block">
           <div className="space-y-0.5">
-            <h2 className="text-2xl font-bold tracking-tight">설정</h2>
+            <h2 className="text-2xl font-bold tracking-tight">관리자</h2>
             <p className="text-muted-foreground">
-              딱히 설정할 건 없음
+              관리자 권한 페이지
             </p>
           </div>
           <Separator className="my-6"/>
