@@ -1,6 +1,6 @@
 import {Metadata} from "next"
 import {Separator} from "@/components/ui/separator";
-import {SidebarNav} from "@/app/main/components/sidebar-nav";
+import {SidebarNav} from "@/app/settings/components/sidebar-nav";
 import {ScrollArea} from "@/components/ui/scroll-area";
 
 
@@ -12,23 +12,23 @@ export const metadata: Metadata = {
 const sidebarNavItems = [
   {
     title: "Profile",
-    href: "/main/profile",
+    href: "/settings/profile",
   },
   {
     title: "Account",
-    href: "/main/account",
+    href: "/settings/account",
   },
   {
     title: "Appearance",
-    href: "/main/appearance",
+    href: "/settings/appearance",
   },
   {
     title: "Notifications",
-    href: "/main/notifications",
+    href: "/settings/notifications",
   },
   {
     title: "Display",
-    href: "/main/display",
+    href: "/settings/display",
   },
 ]
 
@@ -38,7 +38,7 @@ interface SettingsLayoutProps {
 
 export default function SettingsLayout({children}: SettingsLayoutProps) {
   return (
-    <div className="container relative py-20">
+    <div className="container relative py-10">
       <div className="overflow-hidden rounded-[0.5rem] border bg-background shadow-md md:shadow-xl">
         <div className="hidden space-y-6 p-10 pb-16 md:block">
           <div className="space-y-0.5">
@@ -52,7 +52,7 @@ export default function SettingsLayout({children}: SettingsLayoutProps) {
             <aside className="-mx-4 lg:w-1/5">
               <SidebarNav items={sidebarNavItems}/>
             </aside>
-            <ScrollArea className={"rounded-md border p-8 w-4/5 flex-auto"}>
+            <ScrollArea className={"rounded-md border p-8 w-full lg:w-4/5 flex-auto"}>
               {children}
             </ScrollArea>
           </div>
