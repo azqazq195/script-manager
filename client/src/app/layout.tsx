@@ -5,6 +5,8 @@ import {cn} from "@/lib/utils";
 import {ThemeProvider} from "@/components/providers";
 import {fontSans} from "@/lib/fonts";
 import {Toaster} from "@/components/ui/toaster";
+import {SiteHeader} from "@/components/site-header";
+import * as React from "react";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -41,7 +43,11 @@ export default function RootLayout({children}: RootLayoutProps) {
         disableTransitionOnChange
       >
         <div vaul-drawer-wrapper="">
-          <div className="relative flex min-h-screen flex-col bg-background">
+          <div className={"md:hidden min-h-screen flex flex-col justify-center items-center"}>
+            <h1>화면이 너무 작아유</h1>
+          </div>
+          <div className="hidden md:flex relative min-h-screen flex-col bg-background">
+            <SiteHeader/>
             <main className="flex-1">
               {children}
             </main>
