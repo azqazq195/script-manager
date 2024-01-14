@@ -44,7 +44,7 @@ export default function RootLayout({children}: RootLayoutProps) {
       >
         <div vaul-drawer-wrapper="">
           <div className={"md:hidden min-h-screen flex flex-col justify-center items-center"}>
-            <h1>창민이가 만들어 주겠지.</h1>
+            <h1>창민이가 만들어 주겠지</h1>
           </div>
           <div className="hidden md:flex relative min-h-screen flex-col bg-background">
             <SiteHeader/>
