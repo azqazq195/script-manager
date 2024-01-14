@@ -14,14 +14,8 @@ import {useRouter} from "next/navigation";
 export default function Page() {
   const router = useRouter();
   const FormSchema = z.object({
-    username: z.string().trim().min(2, {
-      message: "이름은 2글자 이상 이어야 합니다.",
-    }).max(4, {
-      message: "이름은 4글자 미만 이어야 합니다."
-    }),
-    password: z.string().trim().min(4, {
-      message: "비밀번호는 4자리 이상이어야 합니다."
-    }),
+    username: z.string().min(1, "이름을 입력해 주세요."),
+    password: z.string().min(1, "비밀번호를 입력해 주세요."),
   })
 
   const form = useForm<z.infer<typeof FormSchema>>({
